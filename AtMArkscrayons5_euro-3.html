@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AtMArkscrayons5.€</title>
+<style>
+:root{--bg:#0c1017;--panel:#151c27;--panel2:#1b2532;--line:#273648;--text:#e9f1fa;--muted:#9badbf;--cyan:#5be1d0;--purple:#a58cff;--yellow:#ffd166;--pink:#ff76b7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0,#182739 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:24px 18px 16px;max-width:1100px;margin:auto}.logo{display:flex;align-items:center;gap:12px}.mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),#4e8fff);color:#08131b;font-weight:900;font-size:19px;box-shadow:0 0 25px #5be1d033}.logo h1{font-size:clamp(20px,4vw,30px);margin:0;letter-spacing:-.5px}.subtitle{color:var(--muted);margin:7px 0 0}.topbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px;background:#101722}.progressbox{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+main{max-width:1100px;margin:auto;padding:0 18px 40px}.hero{border:1px solid #2d4154;background:linear-gradient(135deg,#162735,#182032 70%,#212036);padding:20px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:20px}.hero h2{margin:0;font-size:22px}.hero p{margin:6px 0 0;color:var(--muted)}.hero .spark{font-size:44px}
+nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;margin-bottom:12px}.tab{border:1px solid var(--line);background:#111924;color:var(--muted);border-radius:12px;padding:9px 14px;white-space:nowrap;cursor:pointer;font-weight:700}.tab.active{background:#193344;border-color:#3e91a4;color:var(--cyan)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px;min-height:160px;transition:.18s}.card:hover{transform:translateY(-2px);border-color:#476277}.card .emoji{font-size:28px}.card h3{margin:6px 0 4px;font-size:17px}.card p{color:var(--muted);margin:0 0 12px;font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #345265;background:#193041;color:var(--cyan);padding:9px 12px;border-radius:11px;font-weight:750;cursor:pointer;text-decoration:none;font-size:13px}.btn:hover{filter:brightness(1.15)}.btn.secondary{background:#25243b;border-color:#49406e;color:var(--purple)}.btn.gold{background:#342d1d;border-color:#6c5a35;color:var(--yellow)}.btn.pink{background:#352237;border-color:#69445f;color:var(--pink)}
+.section{display:none}.section.active{display:block}.section-title{display:flex;align-items:center;justify-content:space-between;margin:12px 0 14px;gap:12px}.section-title h2{margin:0;font-size:20px}.small{color:var(--muted);font-size:12px}
+.lesson{margin-top:12px;border:1px solid var(--line);border-radius:15px;background:#101720;padding:14px;display:none}.lesson.show{display:block}.lesson h3{margin:0 0 8px}.lesson pre{overflow:auto;background:#080d13;border:1px solid #263342;border-radius:10px;padding:12px;color:#b8f4d2;font-size:13px}.lesson .close{float:right;border:0;background:none;color:var(--muted);cursor:pointer;font-size:20px}
+.currencybox{display:grid;grid-template-columns:1fr 1fr;gap:12px}.currencybox input,.currencybox select{width:100%;padding:11px;background:#0c1219;color:var(--text);border:1px solid var(--line);border-radius:11px}.result{padding:14px;border-radius:14px;background:#102a25;border:1px solid #2a6656;color:#9af2ce;font-size:20px;font-weight:800}.tiplist{display:grid;gap:10px}.tip{padding:13px;border-radius:14px;background:#101923;border:1px solid var(--line)}.tip b{color:var(--yellow)}.quiz{border:1px solid var(--line);border-radius:16px;padding:16px;background:#121a24}.quiz-options{display:grid;gap:8px;margin-top:10px}.quiz-options button{text-align:left}.foot{margin-top:24px;text-align:center;color:#77899c;font-size:12px}
+.modal{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal.show{display:flex}.modalbox{max-width:500px;width:100%;background:#18222e;border:1px solid #3b5267;border-radius:20px;padding:20px;box-shadow:0 20px 70px #0008}.modalbox h3{margin-top:0}.modalbox p{color:var(--muted)}.modalbox .btn{margin-top:8px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{align-items:flex-start}}@media(max-width:520px){.grid{grid-template-columns:1fr}.currencybox{grid-template-columns:1fr}.hero h2{font-size:19px}.hero .spark{font-size:33px}}
+</style></head>
+<body>
+<header>
+<div class="logo"><div class="mark">A€</div><div><h1>AtMArkscrayons5.€</h1><div class="subtitle">Tiny learning hub · coding, tech & money tips</div></div></div>
+<div class="topbar"><span class="pill">🗓️ Monthly edition · November 2026</span><div class="progressbox">✨ Explorer mode <span id="count">0</span> tips opened</div></div>
+</header>
+<main>
+<div class="hero"><div><h2>Welcome to your mini learning station!</h2><p>Tap a card to reveal a quick lesson. Learn something, try it, repeat.</p></div><div class="spark">🧠✨</div></div>
+<nav>
+<button class="tab active" data-tab="home">🏠 Home</button><button class="tab" data-tab="python">🐍 Python</button><button class="tab" data-tab="coding">💻 Coding</button><button class="tab" data-tab="tech">📱 Tech tips</button><button class="tab" data-tab="money">💶 Currency</button><button class="tab" data-tab="quiz">🎯 Quiz</button>
+</nav>
+<section id="home" class="section active">
+<div class="section-title"><h2>Explore categories</h2><span class="small">Choose where to start</span></div>
+<div class="grid">
+<div class="card"><div class="emoji">🐍</div><h3>Python Starter Pack</h3><p>Variables, print, input, loops and functions.</p><button class="btn" onclick="switchTab('python')">Open Python →</button></div>
+<div class="card"><div class="emoji">💻</div><h3>Coding corner</h3><p>HTML, CSS, JavaScript and programming basics.</p><button class="btn secondary" onclick="switchTab('coding')">Explore coding →</button></div>
+<div class="card"><div class="emoji">🛡️</div><h3>Device & tech tips</h3><p>Security, backups, customization and what to know before changing your device.</p><button class="btn pink" onclick="switchTab('tech')">Read tech tips →</button></div>
+<div class="card"><div class="emoji">💱</div><h3>Money & currencies</h3><p>Understand euros, dollars, exchange rates and conversion.</p><button class="btn gold" onclick="switchTab('money')">Open currency lab →</button></div>
+<div class="card"><div class="emoji">🎯</div><h3>Quick quiz</h3><p>Test a few things you learned.</p><button class="btn" onclick="switchTab('quiz')">Play quiz →</button></div>
+<div class="card"><div class="emoji">📆</div><h3>Monthly updates</h3><p>New mini lessons and fresh links can be added each month.</p><button class="btn secondary" onclick="showModal('Monthly update','This edition is November 2026. The next edition can add new lessons, videos, quizzes and currency examples.')">What's new?</button></div>
+</div></section>
+
+<section id="python" class="section">
+<div class="section-title"><h2>🐍 Python basics</h2><span class="small">Tap for instant explanations</span></div>
+<div class="grid">
+<div class="card"><div class="emoji">🖨️</div><h3>print()</h3><p>Display text or a value.</p><button class="btn" onclick="lesson('print','print() tells Python to display something on the screen.','print(\"Hello, world!\")','Output: Hello, world!')">Learn it</button></div>
+<div class="card"><div class="emoji">📦</div><h3>Variables</h3><p>Store information in a name.</p><button class="btn" onclick="lesson('variables','A variable is a named place to store a value. You can update it later.','name = \"Alex\"\\nage = 12\\nprint(name, age)','Alex 12')">Learn it</button></div>
+<div class="card"><div class="emoji">⌨️</div><h3>input()</h3><p>Ask the person running your program.</p><button class="btn" onclick="lesson('input','input() waits for the user to type something.','name = input(\"Your name? \")\\nprint(\"Hi\", name)','Your name? Sam\\nHi Sam')">Learn it</button></div>
+<div class="card"><div class="emoji">🔀</div><h3>if / else</h3><p>Make a program choose.</p><button class="btn" onclick="lesson('if / else','if checks a condition. else runs when the condition is false.','coins = 5\\nif coins >= 5:\\n    print(\"Enough!\")\\nelse:\\n    print(\"Keep saving\")','Enough!')">Learn it</button></div>
+<div class="card"><div class="emoji">🔁</div><h3>Loops</h3><p>Repeat an action.</p><button class="btn" onclick="lesson('loops','A for loop can repeat code a set number of times.','for number in range(3):\\n    print(number)','0\\n1\\n2')">Learn it</button></div>
+<div class="card"><div class="emoji">🧩</div><h3>Functions</h3><p>Reusable blocks of code.</p><button class="btn" onclick="lesson('functions','A function groups instructions under a name. Call it whenever you need it.','def greet():\\n    print(\"Hey!\")\\n\\ngreet()','Hey!')">Learn it</button></div>
+</div>
+<div id="lesson" class="lesson"><button class="close" onclick="hideLesson()">×</button><h3 id="lessonTitle"></h3><p id="lessonText"></p><pre id="lessonCode"></pre><div class="small" id="lessonOutput"></div></div>
+<div class="section-title" style="margin-top:24px"><h2>🎬 Three Python videos</h2><span class="small">Open YouTube directly</span></div>
+<div class="grid">
+<div class="card"><div class="emoji">🌱</div><h3>Python from scratch</h3><p>Long beginner course with practical examples.</p><a class="btn" href="https://www.youtube.com/watch?v=oDOw5tB3Udw" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+<div class="card"><div class="emoji">⚡</div><h3>Python Full Course — Mosh</h3><p>A clear course covering fundamentals and practice.</p><a class="btn" href="https://www.youtube.com/watch?v=K5KVEU3aaeQ" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+<div class="card"><div class="emoji">🔎</div><h3>Python in 1 hour</h3><p>Shorter intro to core concepts.</p><a class="btn" href="https://www.youtube.com/results?search_query=Programming+with+Mosh+Python+in+1+hour" target="_blank" rel="noopener">Find video ↗</a></div>
+</div></section>
+
+<section id="coding" class="section"><div class="section-title"><h2>💻 Coding quick tips</h2></div><div class="grid">
+<div class="card"><div class="emoji">🌐</div><h3>HTML</h3><p>HTML structures a web page: headings, paragraphs, links and buttons.</p><button class="btn" onclick="showModal('HTML quick tip','A heading looks like this: &lt;h1&gt;My page&lt;/h1&gt;. A paragraph: &lt;p&gt;Hello!&lt;/p&gt;. HTML gives the content structure.')">Open tip</button></div>
+<div class="card"><div class="emoji">🎨</div><h3>CSS</h3><p>CSS changes how a web page looks.</p><button class="btn" onclick="showModal('CSS quick tip','Example: body { background: #101820; color: white; } sets a dark background and white text. CSS can control colors, spacing, layout and animation.')">Open tip</button></div>
+<div class="card"><div class="emoji">⚙️</div><h3>JavaScript</h3><p>JavaScript adds behavior and interactivity.</p><button class="btn" onclick="showModal('JavaScript quick tip','Example: document.querySelector(\"button\").addEventListener(\"click\", () => alert(\"Hi!\")); This makes a button respond to a click.')">Open tip</button></div>
+<div class="card"><div class="emoji">🧰</div><h3>Debugging</h3><p>Read error messages and check one thing at a time.</p><button class="btn" onclick="showModal('Debugging tip','Try: 1) read the last line of the error, 2) check spelling and brackets, 3) simplify the code, 4) test again. Errors are clues—not failure.')">Open tip</button></div>
+<div class="card"><div class="emoji">🧠</div><h3>Think like a coder</h3><p>Split big tasks into smaller steps.</p><button class="btn" onclick="showModal('Problem-solving tip','Before coding, write what goes in, what should happen, and what should come out. Then solve one small step at a time.')">Open tip</button></div>
+<div class="card"><div class="emoji">🧪</div><h3>Experiment</h3><p>Change one thing and see what happens.</p><button class="btn" onclick="showModal('Experiment tip','Make a copy of your code first. Try changing a value, a color, or the text. Compare the result and learn why it changed.')">Open tip</button></div>
+</div></section>
+
+<section id="tech" class="section"><div class="section-title"><h2>📱 Device & tech tips</h2><span class="small">Safety-first information</span></div><div class="tiplist">
+<div class="tip"><b>Backups first.</b> Before changing settings or software, make sure important photos, files and contacts are backed up.</div>
+<div class="tip"><b>Keep your device updated.</b> Updates often include security fixes. Use official settings and trusted sources.</div>
+<div class="tip"><b>Be cautious with app recommendations.</b> Avoid apps that ask for unusual permissions, promise impossible features, or require disabling security protections.</div>
+<div class="tip"><b>Understand customization risks.</b> Major system modifications may affect warranty, security, stability or access to apps. Research risks with a trusted adult before making changes.</div>
+<div class="tip"><b>Don't share private information.</b> Never post passwords, verification codes, home addresses or identifying device details publicly.</div>
+<div class="tip"><b>Choose official sources.</b> Download apps from trusted app stores or official developer pages; avoid random download mirrors.</div>
+</div></section>
+
+<section id="money" class="section"><div class="section-title"><h2>💶 Currency lab</h2><span class="small">Example rates only — not live rates</span></div>
+<div class="card" style="min-height:auto;margin-bottom:14px"><h3>💡 What is a currency?</h3><p>A currency is the money used in a place. The euro (€) is used in many European countries, the US dollar ($) in the United States, and the pound (£) in the United Kingdom. Their values can change against one another.</p></div>
+<div class="card" style="min-height:auto"><h3>🔄 Example converter</h3><p>Using a pretend example rate of 1 EUR = 1.10 USD. Actual exchange rates change.</p><div class="currencybox"><div><label for="amount">Amount</label><input id="amount" type="number" min="0" value="10" oninput="convert()"></div><div><label for="from">From</label><select id="from" onchange="convert()"><option value="EUR">EUR €</option><option value="USD">USD $</option><option value="GBP">GBP £</option></select></div><div><label for="to">To</label><select id="to" onchange="convert()"><option value="USD">USD $</option><option value="EUR">EUR €</option><option value="GBP">GBP £</option></select></div></div><div class="result" id="conversion" style="margin-top:12px">€10.00 ≈ $11.00</div><p class="small">Rates in this demo: EUR 1 · USD 0.91 · GBP 1.17 per euro (illustrative). Fees may apply when exchanging money.</p></div>
+<div class="tiplist" style="margin-top:14px"><div class="tip"><b>Exchange rate:</b> how much one currency is worth in another.</div><div class="tip"><b>Example:</b> if €1 = $1.10, then €5 = $5.50 using that rate.</div><div class="tip"><b>Why does it change?</b> Supply and demand, economic conditions, interest rates and other factors can affect currency prices.</div><div class="tip"><b>Compare fees:</b> an exchange service may add a fee or use a different rate from the example rate.</div></div></section>
+
+<section id="quiz" class="section"><div class="section-title"><h2>🎯 Quick quiz</h2><span class="small">One question at a time</span></div><div class="quiz"><h3 id="question">What does Python's print() do?</h3><div class="quiz-options" id="options"></div><p id="quizFeedback" class="small"></p><button class="btn" id="next" onclick="nextQuestion()" style="display:none">Next question →</button><div id="score" style="margin-top:10px;font-weight:bold"></div></div></section>
+<div class="foot">Made for curious minds · AtMArkscrayons5.€ · November 2026 edition</div>
+</main>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><button class="close" style="float:right" onclick="closeModal()">×</button><h3 id="modalTitle"></h3><p id="modalText"></p><button class="btn" onclick="closeModal()">Got it</button></div></div>
+<script>
+let opened=0;
+function countOpen(){opened++;document.getElementById('count').textContent=opened}
+function switchTab(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelector('[data-tab="'+id+'"]').classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>switchTab(t.dataset.tab)));
+function lesson(title,text,code,out){countOpen();const box=document.getElementById('lesson');box.classList.add('show');document.getElementById('lessonTitle').textContent=title;document.getElementById('lessonText').textContent=text;document.getElementById('lessonCode').textContent=code;document.getElementById('lessonOutput').textContent='Example output: '+out;box.scrollIntoView({behavior:'smooth',block:'nearest'})}
+function hideLesson(){document.getElementById('lesson').classList.remove('show')}
+function showModal(title,text){countOpen();document.getElementById('modalTitle').textContent=title;document.getElementById('modalText').textContent=text;document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+const rates={EUR:1,USD:.91,GBP:1.17},symbols={EUR:'€',USD:'$',GBP:'£'};
+function convert(){let a=Number(document.getElementById('amount').value)||0,f=document.getElementById('from').value,t=document.getElementById('to').value;let result=a/rates[f]*rates[t];document.getElementById('conversion').textContent=symbols[f]+a.toFixed(2)+' ≈ '+symbols[t]+result.toFixed(2)}
+const qs=[{q:'What does print() do?',a:['Shows text or values','Deletes a variable','Starts Wi-Fi'],c:0,why:'Correct! print() displays something.'},{q:'Which symbol is used for euros?',a:['£','$','€'],c:2,why:'Correct — € is the euro symbol.'},{q:'What does a for-loop do?',a:['Repeats instructions','Changes screen brightness','Converts money'],c:0,why:'Correct! A for-loop repeats code over items or a sequence.'},{q:'What is CSS mainly used for?',a:['Styling webpages','Storing passwords','Calculating exchange rates'],c:0,why:'Correct! CSS styles a webpage.'}];let qi=0,score=0,answered=false;
+function renderQ(){let q=qs[qi];document.getElementById('question').textContent=q.q;let opt=document.getElementById('options');opt.innerHTML='';q.a.forEach((v,i)=>{let b=document.createElement('button');b.className='btn secondary';b.textContent=v;b.onclick=()=>answer(i);opt.appendChild(b)});document.getElementById('quizFeedback').textContent='';document.getElementById('next').style.display='none';document.getElementById('score').textContent='';answered=false}
+function answer(i){if(answered)return;answered=true;countOpen();let q=qs[qi];document.getElementById('quizFeedback').textContent=i===q.c?q.why:'Not quite. '+q.why;if(i===q.c)score++;document.querySelectorAll('#options button').forEach(b=>b.disabled=true);document.getElementById('next').style.display='inline-flex';}
+function nextQuestion(){qi++;if(qi>=qs.length){document.getElementById('question').textContent='Quiz complete! 🎉';document.getElementById('options').innerHTML='';document.getElementById('quizFeedback').textContent='You got '+score+' out of '+qs.length+' correct. Try again to beat your score!';document.getElementById('next').textContent='Play again';document.getElementById('next').onclick=()=>{qi=0;score=0;document.getElementById('next').textContent='Next question →';document.getElementById('next').onclick=nextQuestion;renderQ()};return}renderQ()}
+renderQ();convert();
+</script>
+</body></html>
